@@ -1,0 +1,60 @@
+.rate-limit-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    background: white;
+}
+
+.response-area {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.response-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.response-area::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.response-area::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 4px;
+}
+
+.progress {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+}
+
+.status-badge .badge {
+    font-size: 0.8rem;
+    padding: 0.35em 0.65em;
+}
+
+.github-corner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.title-container h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.title-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}

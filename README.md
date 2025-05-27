@@ -1,94 +1,48 @@
-# API Rate Limiter
+# 🚀 Speedguard - Advanced API Rate Limiting Middleware
 
-A simple API rate limiter implementation using Express.js and Redis.
+Speedguard is a **high-performance API rate-limiting middleware** for **Node.js and Express**. It helps **prevent abuse, protect APIs, and optimize performance** using powerful algorithms like **Fixed Window, Token Bucket, and Sliding Window**.
 
-## Features
+---
 
-- Limits API requests based on client IP or API key
-- Configurable time windows and request limits
-- Response headers with rate limit information
-- Graceful handling of Redis connection issues
+## 📌 What is API Rate Limiting?
 
-## Prerequisites
+Rate limiting controls how often a user or system can **request resources from a server** within a set timeframe. It helps:
+- 🚀 **Prevent DDoS attacks**
+- ⚡ **Optimize server performance**
+- 🔒 **Enhance API security**
+- 💰 **Reduce infrastructure costs**
+- 🛡️ **Protect against bot abuse**
 
-- Node.js (v14 or higher recommended)
-- Redis server
+### 🛠️ How Does Speedguard Work?
 
-## Installation
+Speedguard uses **Redis** for distributed rate limiting and supports **multiple algorithms**:
+1️⃣ **Fixed Window** - Simple request limit per time window.  
+2️⃣ **Sliding Window** - More accurate limiting with real-time calculations.  
+3️⃣ **Token Bucket** - Predefined token-based request control.  
 
-1. Clone this repository:
+---
 
+## 📥 Installation
+
+Speedguard requires **Node.js v14.0.0 or higher**.
+
+**install zip into your codebase root folder:**
 ```bash
-git clone <repository-url>
-cd apiRateLimiter
-```
 
-2. Install dependencies:
+import express from "express";
+import { rateLimiter } from "speedguard";
 
-```bash
-npm install
-```
+const app = express();
+const port = 3000;
 
-3. Create a `.env` file in the root directory with the following content:
+// Apply rate limiter middleware
+app.use(rateLimiter("sliding")); // Choose: "fixed", "token", "sliding"
 
-```
-PORT=3000
-REDIS_URL=redis://localhost:6379
-```
+app.get("/", (req, res) => {
+    res.send("Hello! This is a rate-limited API.");
+});
 
-4. Install Redis if you haven't already:
-   - On macOS: `brew install redis`
-   - On Ubuntu/Debian: `sudo apt-get install redis-server`
-   - On Windows: Download from https://github.com/tporadowski/redis/releases
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
 
-## Usage
-
-1. Start Redis server:
-
-```bash
-redis-server
-```
-
-2. Start the API server:
-
-```bash
-npm start
-```
-
-For development with auto-restart:
-
-```bash
-npm run dev
-```
-
-3. Test the rate limiter:
-
-```bash
-# Make multiple requests to see rate limiting in action
-curl http://localhost:3000/api/data
-```
-
-## Configuration
-
-Edit the rate limiter configuration in `src/server.js` to adjust:
-
-- Time window (default: 60 seconds)
-- Maximum requests per window (default: 5)
-- Key generation strategy (IP or API key)
-- Rate limit exceeded message
-
-## How It Works
-
-This rate limiter uses Redis to track request counts for each client. The algorithm works as follows:
-
-1. When a request arrives, a unique key is generated based on the client's IP or API key
-2. The current count for this key is retrieved from Redis
-3. If the key doesn't exist, it's created with a count of 1 and an expiration time
-4. If the key exists, its count is incremented
-5. If the count exceeds the maximum allowed, the request is rejected
-6. Otherwise, the request is processed normally
-
-Rate limit information is included in response headers:
-
-- `X-RateLimit-Limit`: Maximum requests allowed
-- `X-RateLimit-Remaining`: Remaining requests in the current window

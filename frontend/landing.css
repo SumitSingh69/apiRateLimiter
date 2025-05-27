@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:whitesmoke;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1409px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background:whitesmoke;
+  padding: 20px 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding:0;
+  display:flex;
+  gap: 45px;
+}
+
+header nav ul li a {
+  color: #1c1b2e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  border-bottom: black;
+  font-size: larger;
+}
+
+header nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  background: #1c1b2e;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  background: #007bff;
+  color: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+.github-button {
+  background: #444;
+  color: #f5f5f5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.github-button:hover {
+  background: #555;
+}
+
+/* Key Features Section */
+.features {
+  padding: 50px 20px;
+  text-align: center;
+  padding-bottom: 120px;
+  padding-top: 5px;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+}
+
+.features .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  height: 295px;
+}
+
+.features .feature {
+  background:#1c1b2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features .feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.features .feature span {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.features .feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.features .feature p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Code Example Section */
+.code-example {
+  background:  #1c1b2e;
+  padding: 5px 10px;
+  text-align: center;
+  color: #f8f8f2;
+}
+
+.code-example h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.code-example pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  overflow-x: auto;
+  font-size: 20px;
+}
+
+/* Footer */
+footer {
+  background: #1c1b2e;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+h4{
+  color: black;
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedguard Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #1c1b2e;
+            --text-color: #333;
+            --background-light: #f8f9fa;
+            --code-background: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background: var(--background-light);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        nav {
+            background: linear-gradient(to right, var(--secondary-color), #2a2946);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .sidebar h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul ul {
+            padding-left: 20px;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: var(--primary-color);
+        }
+
+        .main-content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .main-content h2 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        pre {
+            background: var(--code-background);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        code {
+            font-family: 'Fira Code', 'Consolas', monospace;
+            font-size: 0.95rem;
+        }
+
+        .method {
+            border-left: 4px solid var(--primary-color);
+            padding: 20px 30px;
+            margin: 30px 0;
+            background: var(--background-light);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .method h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .alert:before {
+            content: "⚠️";
+            font-size: 1.5rem;
+        }
+
+        .copy-button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        pre:hover .copy-button {
+            opacity: 1;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: var(--background-light);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📘 Speedguard Documentation</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#installation">📥 Installation</a>
+            <a href="#usage">🚀 Usage</a>
+            <a href="#configuration">⚙️ Configuration</a>
+            <a href="#examples">💡 Examples</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="sidebar">
+                <h3>📑 Contents</h3>
+                <ul>
+                    <li><a href="#installation">📥 Installation</a></li>
+                    <li><a href="#usage">🚀 Basic Usage</a></li>
+                    <li><a href="#configuration">⚙️ Configuration</a></li>
+                    <li><a href="#examples">💡 Examples</a>
+                        <ul>
+                            <li><a href="#basic-example">Basic Example</a></li>
+                            <li><a href="#advanced-example">Advanced Example</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <section id="installation">
+                    <h2>📥 Installation</h2>
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab(event, 'npm')">npm</button>
+                        <button class="tab" onclick="switchTab(event, 'yarn')">yarn</button>
+                    </div>
+                    
+                    <div id="npm" class="tab-content active">
+                        <pre><code class="language-bash">currntly unavailable!</code></pre>
+                    </div>
+                    
+                    <div id="yarn" class="tab-content">
+                        <pre><code class="language-bash">currntly unavailable!</code></pre>
+                    </div>
+
+                    <div class="alert">
+                        Node.js version 14.0.0 or higher is required for Speedguard.
+                    </div>
+                </section>
+
+                <section id="usage">
+                    <h2>🚀 Basic Usage</h2>
+                    <p>Integrate Speedguard with Express in just a few lines:</p>
+                    <pre><code class="language-javascript">import express from "express";
+import { rateLimiter } from "../src/index.mjs";
+
+const app = express();
+const port = 3000;
+
+// Apply rate limiter middleware
+app.use(rateLimiter("sliding")); // User can choose algorithm (e.g., "fixed", "token", "sliding", etc.)
+
+app.get("/", (req, res) => {
+        res.send("Hello! This is a rate-limited API.");
+});
+
+app.listen(port, () => {
+        console.log(`Server running on http://localhost:${port}`);
+});
+                        </code></pre>
+                </section>
+
+                <section id="configuration">
+                    <h2>⚙️ Configuration</h2>
+                    <p>Create a <code>config.js</code> file in your project root:</p>
+                    <pre><code class="language-javascript">export default {
+        rateLimit: {
+                defaultAlgorithm: "fixed", // User prefers Token Bucket instead of Fixed Window
+                windowMs: 30 * 1000, // 30 seconds
+                limit: 20, // Increased limit
+                backoffBaseDelay: 1000, // 1 second base delay
+
+                // Custom user tiers
+                tiers: {
+                free: { limit: 15, windowMs: 30 * 1000 },
+                premium: { limit: 100, windowMs: 60 * 1000 },
+                admin: { limit: 200, windowMs: 60 * 1000 }
+                },
+                
+                customMessage: "You're hitting the limit too fast! Slow down."
+        }
+};
+                    </code></pre>
+                </section>
+
+                <section id="examples">
+                    <h2>💡 Examples</h2>
+                    
+                    <div id="basic-example" class="method">
+                        <h3>Basic Example</h3>
+                        <pre><code class="language-javascript">const express = require('express');
+const { RateLimiter } = require('speedguard');
+
+const app = express();
+const limiter = new RateLimiter();
+
+// Apply to specific route
+app.get('/api/data', 
+    limiter.middleware(), 
+    (req, res) => {
+        res.json({ data: 'Success' });
+    }
+);</code></pre>
+                    </div>
+
+                    <div id="advanced-example" class="method">
+                        <h3>Advanced Example with Custom Configuration</h3>
+                        <pre><code class="language-javascript">import { Router } from "express";
+import { changeCurrentPassword, getCurrentUser, getUserChannelProfile, getWatchHistory, loginUser, 
+        logoutUser, refreshAccessToken, registerUser, updateAccountDetails, updateUserAvatar, 
+        updateUserCoverImage } from "../controllers/user.controller.js";
+import {upload} from "../middlewares/multer.middleware.js"
+import { verifyJWT } from "../middlewares/auth.middleware.js";
+import { rateLimiter } from "../src/index.mjs";
+
+
+const router = Router()
+
+router.use(RateLimiter("fiexd"))
+
+router.route("/register").post(
+        // middleware of multer for file handling
+        upload.fields([
+        {
+                name: "avatar",
+                maxCount: 1
+        },
+        {
+                name: "coverImage",
+                maxCount: 1
+        }
+        ]),
+        registerUser
+)
+
+router.route("/login").post(loginUser)
+
+// secured routes
+router.route("/logout").post(verifyJWT, logoutUser)
+router.route("/refresh-token").post(refreshAccessToken)
+router.route("/change-password").post(verifyJWT, changeCurrentPassword)
+
+router.route("/current-user").get(verifyJWT, getCurrentUser)
+router.route("/c/:username").get(verifyJWT, getUserChannelProfile)
+router.route("/history").get(verifyJWT, getWatchHistory)
+
+router.route("/update-account").patch(verifyJWT, updateAccountDetails)
+router.route("/avatar").patch(verifyJWT, upload.single("avatar"), updateUserAvatar)
+router.route("/cover-image").patch(verifyJWT, upload.single("coverImage"), updateUserCoverImage)
+
+export default router</code></pre>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-bash.min.js"></script>
+    <script>
+        function switchTab(event, tabName) {
+            const tabs = document.getElementsByClassName('tab');
+            const tabContents = document.getElementsByClassName('tab-content');
+            
+            // Remove active class from all tabs and contents
+            for (let tab of tabs) {
+                tab.classList.remove('active');
+            }
+            for (let content of tabContents) {
+                content.classList.remove('active');
+            }
+            
+            // Add active class to clicked tab and corresponding content
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Add copy buttons to code blocks
+        document.querySelectorAll('pre').forEach(pre => {
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.textContent = 'Copy';
+            
+            button.addEventListener('click', () => {
+                const code = pre.querySelector('code');
+                navigator.clipboard.writeText(code.textContent);
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+            
+            pre.style.position = 'relative';
+            pre.appendChild(button);
+        });
+    </script>
+</body>
+</html>

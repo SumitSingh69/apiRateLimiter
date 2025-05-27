@@ -1,22 +1,20 @@
 {
-  "name": "apiratelimiter",
+  "name": "test",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "API rate limiter using Redis and Express",
+  "description": "",
   "dependencies": {
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "redis": "^5.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "deepmerge": "^4.3.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1",
+    "ioredis": "^5.4.2"
   }
 }

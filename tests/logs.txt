@@ -1,0 +1,156 @@
+[2025-05-26T04:46:09.852Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:09.935Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:10.051Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:10.215Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:10.418Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:10.682Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:11.023Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:11.397Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:11.812Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:12.316Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:12.822Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:13.376Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:13.979Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:14.633Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:15.343Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:16.109Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:16.923Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:17.780Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:18.684Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:19.643Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:20.653Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:21.720Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:22.841Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T04:46:24.006Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-26T05:59:08.116Z] Redis connected
+[2025-05-26T05:59:41.767Z] User ::1 (free) request allowed (1/5)
+[2025-05-26T05:59:42.060Z] User ::1 (free) request allowed (2/5)
+[2025-05-26T05:59:59.201Z] User ::1 (free) request allowed (3/5)
+[2025-05-26T06:00:01.685Z] User ::1 (free) request allowed (4/5)
+[2025-05-26T06:00:02.471Z] User ::1 (free) request allowed (5/5)
+[2025-05-26T06:00:03.005Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T06:00:03.009Z] User ::1 delayed for 500ms due to rate limiting
+[2025-05-26T06:14:55.057Z] Redis connected
+[2025-05-26T06:59:06.516Z] Redis connected
+[2025-05-26T07:25:15.315Z] Redis connected
+[2025-05-26T07:25:25.891Z] User ::1 (free) request allowed (1/5)
+[2025-05-26T07:25:28.252Z] User ::1 (free) request allowed (2/5)
+[2025-05-26T07:25:30.496Z] User ::1 (free) request allowed (3/5)
+[2025-05-26T07:25:30.730Z] User ::1 (free) request allowed (4/5)
+[2025-05-26T07:25:59.261Z] User ::1 (free) request allowed (5/5)
+[2025-05-26T07:26:00.704Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:00.706Z] User ::1 delayed for 500ms due to rate limiting
+[2025-05-26T07:26:01.319Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:01.320Z] User ::1 delayed for 1000ms due to rate limiting
+[2025-05-26T07:26:02.334Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:02.339Z] User ::1 delayed for 2000ms due to rate limiting
+[2025-05-26T07:26:03.937Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:03.938Z] User ::1 delayed for 4000ms due to rate limiting
+[2025-05-26T07:26:07.950Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:07.951Z] User ::1 delayed for 8000ms due to rate limiting
+[2025-05-26T07:26:15.971Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:15.973Z] User ::1 delayed for 16000ms due to rate limiting
+[2025-05-26T07:26:24.469Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:24.472Z] User ::1 delayed for 32000ms due to rate limiting
+[2025-05-26T07:26:24.606Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:24.608Z] User ::1 delayed for 64000ms due to rate limiting
+[2025-05-26T07:26:24.749Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:24.750Z] User ::1 delayed for 128000ms due to rate limiting
+[2025-05-26T07:26:24.962Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:24.963Z] User ::1 delayed for 256000ms due to rate limiting
+[2025-05-26T07:26:25.300Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:25.304Z] User ::1 delayed for 512000ms due to rate limiting
+[2025-05-26T07:26:31.982Z] User ::1 (free) request allowed (1/5)
+[2025-05-26T07:26:31.986Z] User ::1 (free) request allowed (2/5)
+[2025-05-26T07:26:31.990Z] User ::1 (free) request allowed (3/5)
+[2025-05-26T07:26:31.996Z] User ::1 (free) request allowed (4/5)
+[2025-05-26T07:26:32.000Z] User ::1 (free) request allowed (5/5)
+[2025-05-26T07:26:32.003Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:32.004Z] User ::1 delayed for 500ms due to rate limiting
+[2025-05-26T07:26:32.510Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:32.512Z] User ::1 delayed for 1000ms due to rate limiting
+[2025-05-26T07:26:33.517Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:33.517Z] User ::1 delayed for 2000ms due to rate limiting
+[2025-05-26T07:26:35.531Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:35.532Z] User ::1 delayed for 4000ms due to rate limiting
+[2025-05-26T07:26:39.539Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:39.541Z] User ::1 delayed for 8000ms due to rate limiting
+[2025-05-26T07:26:47.552Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:47.553Z] User ::1 delayed for 16000ms due to rate limiting
+[2025-05-26T07:26:56.496Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:26:56.499Z] User ::1 delayed for 32000ms due to rate limiting
+[2025-05-26T07:27:03.570Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-26T07:27:03.571Z] User ::1 delayed for 64000ms due to rate limiting
+[2025-05-27T02:09:16.431Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-27T02:09:16.436Z] Falling back to in-memory storage
+[2025-05-27T02:12:22.491Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-27T02:12:22.492Z] Falling back to in-memory storage
+[2025-05-27T02:19:55.052Z] Redis Error: Error: connect ECONNREFUSED 127.0.0.1:6379
+[2025-05-27T02:19:55.053Z] Falling back to in-memory storage
+[2025-05-27T02:23:26.546Z] Redis connected
+[2025-05-27T02:23:36.643Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:23:48.899Z] User ::1 (free) request allowed (2/5)
+[2025-05-27T02:25:04.752Z] Redis connected
+[2025-05-27T02:25:10.183Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:25:13.992Z] User ::1 (free) request allowed (2/5)
+[2025-05-27T02:25:39.660Z] User ::1 (free) request allowed (3/5)
+[2025-05-27T02:26:51.169Z] Redis connected
+[2025-05-27T02:26:54.413Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:31:51.775Z] Redis connected
+[2025-05-27T02:31:54.458Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:32:20.171Z] User ::1 (free) request allowed (2/5)
+[2025-05-27T02:32:23.617Z] User ::1 (free) request allowed (3/5)
+[2025-05-27T02:32:24.567Z] User ::1 (free) request allowed (4/5)
+[2025-05-27T02:32:24.748Z] User ::1 (free) request allowed (5/5)
+[2025-05-27T02:32:24.917Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:24.918Z] User ::1 delayed for 500ms due to rate limiting
+[2025-05-27T02:32:25.425Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:25.427Z] User ::1 delayed for 1000ms due to rate limiting
+[2025-05-27T02:32:26.433Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:26.434Z] User ::1 delayed for 2000ms due to rate limiting
+[2025-05-27T02:32:28.441Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:28.442Z] User ::1 delayed for 4000ms due to rate limiting
+[2025-05-27T02:32:31.018Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:31.018Z] User ::1 delayed for 8000ms due to rate limiting
+[2025-05-27T02:32:32.448Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:32.449Z] User ::1 delayed for 16000ms due to rate limiting
+[2025-05-27T02:32:39.024Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:39.025Z] User ::1 delayed for 32000ms due to rate limiting
+[2025-05-27T02:32:43.883Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:43.884Z] User ::1 delayed for 64000ms due to rate limiting
+[2025-05-27T02:32:46.199Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:46.200Z] User ::1 delayed for 128000ms due to rate limiting
+[2025-05-27T02:32:51.381Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:32:51.381Z] User ::1 delayed for 256000ms due to rate limiting
+[2025-05-27T02:33:05.453Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:33:06.586Z] User ::1 (free) request allowed (2/5)
+[2025-05-27T02:33:06.818Z] User ::1 (free) request allowed (3/5)
+[2025-05-27T02:33:07.000Z] User ::1 (free) request allowed (4/5)
+[2025-05-27T02:33:07.170Z] User ::1 (free) request allowed (5/5)
+[2025-05-27T02:33:07.333Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:07.334Z] User ::1 delayed for 500ms due to rate limiting
+[2025-05-27T02:33:07.537Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:07.538Z] User ::1 delayed for 1000ms due to rate limiting
+[2025-05-27T02:33:07.840Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:07.841Z] User ::1 delayed for 2000ms due to rate limiting
+[2025-05-27T02:33:08.543Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:08.544Z] User ::1 delayed for 4000ms due to rate limiting
+[2025-05-27T02:33:09.846Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:09.848Z] User ::1 delayed for 8000ms due to rate limiting
+[2025-05-27T02:33:11.030Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:11.031Z] User ::1 delayed for 16000ms due to rate limiting
+[2025-05-27T02:33:12.550Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:12.552Z] User ::1 delayed for 32000ms due to rate limiting
+[2025-05-27T02:33:24.399Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:24.399Z] User ::1 delayed for 64000ms due to rate limiting
+[2025-05-27T02:33:27.036Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:27.037Z] User ::1 delayed for 128000ms due to rate limiting
+[2025-05-27T02:33:44.556Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:44.557Z] User ::1 delayed for 256000ms due to rate limiting
+[2025-05-27T02:33:56.867Z] User ::1 (free) exceeded rate limit (6 requests)
+[2025-05-27T02:33:56.867Z] User ::1 delayed for 512000ms due to rate limiting
+[2025-05-27T02:34:28.402Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:34:28.406Z] User ::1 (free) request allowed (2/5)
+[2025-05-27T02:38:04.459Z] Redis connected
+[2025-05-27T02:38:13.092Z] User ::1 (free) request allowed (1/5)
+[2025-05-27T02:38:14.273Z] User ::1 (free) request allowed (2/5)
